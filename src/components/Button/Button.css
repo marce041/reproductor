@@ -1,0 +1,19 @@
+.button-component {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.button-component:hover {
+  transform: scale(1.05)
+}
+
+.button-component:active {
+  transform: scale(1)
+}
