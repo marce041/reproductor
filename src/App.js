@@ -1,19 +1,17 @@
+import './App.css'
 import React from 'react';
-import Search from './Search';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Search from './components/Search/Search';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 library.add(faSpotify);
 
 function App() {
-  const styles = {
-    marginLeft: '20px' // Establecer el margen izquierdo en 20px
-  };
   return (
-    <div >
-      
-      <h1 style={styles}><FontAwesomeIcon icon={faSpotify}/> Spotify Player</h1>
-      <Search />
+    <div className='app-container'>
+      <h1 className='app-container-logo'><FontAwesomeIcon icon={faSpotify}/> Spotify Player</h1>
+      <Search/>
     </div>
   );
 }
