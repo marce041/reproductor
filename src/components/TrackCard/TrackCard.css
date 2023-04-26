@@ -1,0 +1,28 @@
+.track-card-component {
+  min-width: 280px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.track-card-component > img {
+  max-width: 100%;
+  height: auto;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.track-card-component > h2, .track-card-component > p {
+  color: #fff;
+}
+
+.track-card-component > audio {
+  width: 100%;
+}
+
+.track-card-component:hover {
+  transition: 0.3s;
+  background-color: #ffffff30;
+}
