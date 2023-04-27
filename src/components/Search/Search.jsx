@@ -7,8 +7,7 @@ import TrackCard from '../TrackCard/TrackCard';
 import SpotifyWebApi from "spotify-web-api-js";
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
+import Loading from '../Loading/Loading';
 
 const clientId = "4005ac4ef07443e5849876966a63375f";
 const clientSecret = "3cdd40bb1b3543cdb7fc06c50c31231f";
@@ -48,8 +47,7 @@ const Search = () => {
     }
 
     if (fetchStatus === 'pending'){
-        //SE REMPLAZARÁ POR UN COMPONENTE DE CARGA
-        return <h1>Cargando ...</h1>
+        return <Loading/>
     }
     return (
         <div >
@@ -57,6 +55,7 @@ const Search = () => {
                 <Input
                     type="text"
                     placeholder="Busca una canción..."
+                    required
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
                 />
